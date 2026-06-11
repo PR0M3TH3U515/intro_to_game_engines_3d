@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://b26qij7bo7qm5"]
+
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_2q6dc"]
+[ext_resource type="Texture2D" uid="uid://dokg226strhs1" path="res://assets/black-white-tile-bl/black-white-tile_albedo.png" id="2_mx8sn"]
+[ext_resource type="Texture2D" uid="uid://61tcn4vfkey1" path="res://assets/pav_studio_02_4k.hdr" id="2_w7c3h"]
+[ext_resource type="PackedScene" uid="uid://u0qq3lly3vsk" path="res://assets/pillar/marble_pillar.glb" id="3_w8frs"]
+[ext_resource type="PackedScene" uid="uid://bva32sg2uubgm" path="res://assets/angelstatue/angel_old_marble_version.glb" id="5_ppgk2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ppgk2"]
+albedo_texture = ExtResource("2_mx8sn")
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_w8frs"]
+panorama = ExtResource("2_w7c3h")
+
+[sub_resource type="Sky" id="Sky_mx8sn"]
+sky_material = SubResource("PanoramaSkyMaterial_w8frs")
+process_mode = 3
+
+[sub_resource type="Environment" id="Environment_ppgk2"]
+background_mode = 2
+sky = SubResource("Sky_mx8sn")
+
+[node name="Node3D" type="Node3D" unique_id=494640676]
+
+[node name="ProtoController" parent="." unique_id=8123080 instance=ExtResource("1_2q6dc")]
+transform = Transform3D(5.9604645e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, 5.9604645e-08, 3.3688269, 1.2108277, 0.32039368)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=644105072]
+transform = Transform3D(15.180001, 0, 0, 0, 0.025, 0, 0, 0, 15.840001, 0, 0, 0)
+use_collision = true
+material = SubResource("StandardMaterial3D_ppgk2")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=99972961]
+environment = SubResource("Environment_ppgk2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=673009372]
+
+[node name="pillars" type="Node" parent="." unique_id=1938354738]
+
+[node name="Sketchfab_Scene" parent="pillars" unique_id=1656239462 instance=ExtResource("3_w8frs")]
+transform = Transform3D(0.05, 0, 0, 0, 0.14500001, 0, 0, 0, 0.05, 1.0204486, 7.2282333, -4.656735)
+
+[node name="Sketchfab_Scene2" parent="pillars" unique_id=1203638715 instance=ExtResource("3_w8frs")]
+transform = Transform3D(0.05, 0, 0, 0, 0.14500001, 0, 0, 0, 0.05, 1.0204486, 7.2282333, 3.7582655)
+
+[node name="Sketchfab_Scene3" parent="pillars" unique_id=46895482 instance=ExtResource("3_w8frs")]
+transform = Transform3D(0.05, 0, 0, 0, 0.14500001, 0, 0, 0, 0.05, -2.1345515, 7.2282333, -4.656735)
+
+[node name="Sketchfab_Scene4" parent="pillars" unique_id=500250082 instance=ExtResource("3_w8frs")]
+transform = Transform3D(0.05, 0, 0, 0, 0.14500001, 0, 0, 0, 0.05, -2.1345515, 7.2282333, 3.7582655)
+
+[node name="Sketchfab_Scene5" parent="pillars" unique_id=1132926776 instance=ExtResource("3_w8frs")]
+transform = Transform3D(0.05, 0, 0, 0, 0.14500001, 0, 0, 0, 0.05, -5.1545515, 7.2282333, -4.656735)
+
+[node name="Sketchfab_Scene6" parent="pillars" unique_id=1761703634 instance=ExtResource("3_w8frs")]
+transform = Transform3D(0.05, 0, 0, 0, 0.14500001, 0, 0, 0, 0.05, -5.1545515, 7.2282333, 3.7582655)
+
+[node name="Sketchfab_Scene7" parent="pillars" unique_id=962389935 instance=ExtResource("3_w8frs")]
+transform = Transform3D(0.05, 0, 0, 0, 0.14500001, 0, 0, 0, 0.05, 4.6304483, 7.2282333, -4.656735)
+
+[node name="Sketchfab_Scene8" parent="pillars" unique_id=74248108 instance=ExtResource("3_w8frs")]
+transform = Transform3D(0.05, 0, 0, 0, 0.14500001, 0, 0, 0, 0.05, 4.6304483, 7.2282333, 3.7582655)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1973288933]
+transform = Transform3D(0.5901271, 0.48991847, -0.64166176, 0.16792594, 0.70293826, 0.69114304, 0.78965235, -0.5156139, 0.33255282, -11.31226, 14.302128, 6.90108)
+shadow_enabled = true
+sky_mode = 1
+
+[node name="Sketchfab_Scene" parent="." unique_id=292162850 instance=ExtResource("5_ppgk2")]
+transform = Transform3D(-1.5298985e-08, 0, 0.35, 0, 0.35, 0, -0.35, 0, -1.5298985e-08, -5.505, -0.0049997717, -0.19999997)
