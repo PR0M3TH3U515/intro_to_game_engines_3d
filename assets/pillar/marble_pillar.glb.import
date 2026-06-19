@@ -40,9 +40,8 @@ materials/extract_path=""
 _subresources={
 "nodes": {
 "PATH:Sketchfab_model/Pillar_mtl_obj_cleaner_materialmerger_gles/Object_2": {
-"generate/physics": true,
 "physics/physics_material_override": null,
-"physics/shape_type": 2
+"physics/shape_type": 1
 }
 }
 }

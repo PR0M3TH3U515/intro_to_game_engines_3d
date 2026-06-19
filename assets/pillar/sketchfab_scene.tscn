@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c0lvoq0falmxa"]
+
+[ext_resource type="PackedScene" uid="uid://u0qq3lly3vsk" path="res://assets/pillar/marble_pillar.glb" id="1_pdvvw"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_8vtps"]
+height = 50.239372
+radius = 10.102042
+
+[node name="Sketchfab_Scene" unique_id=442677620 instance=ExtResource("1_pdvvw")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/Pillar_mtl_obj_cleaner_materialmerger_gles/Object_2" parent_id_path=PackedInt32Array(2102093055) index="0" unique_id=2109706452]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.0028438568, -0.004515648, -25.134548)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/Pillar_mtl_obj_cleaner_materialmerger_gles/Object_2/StaticBody3D" index="0" unique_id=1747558771]
+shape = SubResource("CylinderShape3D_8vtps")
