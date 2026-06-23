@@ -2,13 +2,22 @@
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_2q6dc"]
 [ext_resource type="Shader" uid="uid://bq0vtb1qotoo8" path="res://shaders/sky.gdshader" id="2_w7c3h"]
-[ext_resource type="Texture2D" uid="uid://stuw7r58kxw2" path="res://assets/black-white-tile-bl/black-white-tile_roughness.png" id="3_mx8sn"]
 [ext_resource type="Texture2D" uid="uid://v8478nqeo5vy" path="res://assets/HDRi/kloofendal_48d_partly_cloudy_puresky_2k.exr" id="3_w8frs"]
+[ext_resource type="Texture2D" uid="uid://bkey5r10uvj46" path="res://assets/Tiles074_1K-PNG/Tiles074_1K-PNG_Color.png" id="4_mx8sn"]
+[ext_resource type="Texture2D" uid="uid://l3ophse8a16v" path="res://assets/Tiles074_1K-PNG/Tiles074_1K-PNG_Displacement.png" id="5_klq6b"]
+[ext_resource type="Texture2D" uid="uid://bxj5dtlb3eawr" path="res://assets/Tiles074_1K-PNG/Tiles074_1K-PNG_NormalGL.png" id="6_klq6b"]
+[ext_resource type="Texture2D" uid="uid://cqrexp8tqv7iq" path="res://assets/Tiles074_1K-PNG/Tiles074_1K-PNG_Roughness.png" id="7_8c41q"]
+[ext_resource type="PackedScene" uid="uid://bshitsndj8eoe" path="res://scenes/statue0.tscn" id="8_8c41q"]
+[ext_resource type="PackedScene" uid="uid://cdwtxpqvbr8jg" path="res://scenes/statue1.tscn" id="9_olg7q"]
+[ext_resource type="PackedScene" uid="uid://cxdyg8m54vjql" path="res://scenes/statue2.tscn" id="10_olg7q"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w8frs"]
+load_path = "res://.godot/imported/black-white-tile_roughness.png-c659d7683afb8733961caceeacf3aa0d.s3tc.ctex"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_w8frs"]
 shader = ExtResource("2_w7c3h")
 shader_parameter/skyTexture = ExtResource("3_w8frs")
-shader_parameter/evolutionNoise = ExtResource("3_mx8sn")
+shader_parameter/evolutionNoise = SubResource("CompressedTexture2D_w8frs")
 shader_parameter/skyTint = Color(1.5561339, 1.1429074, 1.3764701, 1)
 shader_parameter/tintAmount = 0.5
 shader_parameter/contrast = 0.59200002812
@@ -26,6 +35,17 @@ background_mode = 2
 sky = SubResource("Sky_mx8sn")
 sky_custom_fov = 45.3
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_olg7q"]
+albedo_texture = ExtResource("4_mx8sn")
+metallic_specular = 0.05
+roughness = 0.25
+roughness_texture = ExtResource("7_8c41q")
+normal_enabled = true
+normal_texture = ExtResource("6_klq6b")
+heightmap_enabled = true
+heightmap_scale = 0.0
+heightmap_texture = ExtResource("5_klq6b")
+
 [node name="Node3D" type="Node3D" unique_id=494640676]
 
 [node name="ProtoController" parent="." unique_id=8123080 instance=ExtResource("1_2q6dc")]
@@ -40,6 +60,15 @@ shadow_enabled = true
 sky_mode = 1
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=829168012]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2000002, 0.49949998, 0.7999998)
 use_collision = true
-size = Vector3(7.4, 0.001, 7.8)
+size = Vector3(25, 0.001, 25)
+material = SubResource("StandardMaterial3D_olg7q")
+
+[node name="Sketchfab_Scene" parent="." unique_id=1604773532 instance=ExtResource("8_8c41q")]
+transform = Transform3D(-0.6840402, 0, -1.8793852, 0, 2, 0, 1.8793852, 0, -0.6840402, 7.627604, 1.8, 10.038186)
+
+[node name="Sketchfab_Scene2" parent="." unique_id=1764585235 instance=ExtResource("9_olg7q")]
+transform = Transform3D(0.1606969, 0, -0.19151111, 0, 0.25, 0, 0.19151111, 0, 0.1606969, 3.1145325, 9.025, -2.6956706)
+
+[node name="Sketchfab_Scene3" parent="." unique_id=2024652059 instance=ExtResource("10_olg7q")]
+transform = Transform3D(3.2139378, 0, 3.8302224, 0, 5, 0, -3.8302224, 0, 3.2139378, -6.0697784, 1.3499999, 2.0139375)
