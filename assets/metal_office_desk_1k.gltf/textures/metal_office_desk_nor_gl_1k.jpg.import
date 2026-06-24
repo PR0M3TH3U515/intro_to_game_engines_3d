@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbhtdacr0iocp"
-path.s3tc="res://.godot/imported/Marble019.png-bfd8586291a58431109140d9df9e27cd.s3tc.ctex"
+uid="uid://bs4fu6c1lq0ku"
+path.s3tc="res://.godot/imported/metal_office_desk_nor_gl_1k.jpg-1a8a61fe72f9899729d70bd70dbb1077.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Marble019_1K-PNG/Marble019.png"
-dest_files=["res://.godot/imported/Marble019.png-bfd8586291a58431109140d9df9e27cd.s3tc.ctex"]
+source_file="res://assets/metal_office_desk_1k.gltf/textures/metal_office_desk_nor_gl_1k.jpg"
+dest_files=["res://.godot/imported/metal_office_desk_nor_gl_1k.jpg-1a8a61fe72f9899729d70bd70dbb1077.s3tc.ctex"]
 
 [params]
 
@@ -22,12 +22,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://assets/metal_office_desk_1k.gltf/textures/metal_office_desk_nor_gl_1k.jpg"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

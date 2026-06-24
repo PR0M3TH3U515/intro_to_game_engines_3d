@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbhtdacr0iocp"
-path.s3tc="res://.godot/imported/Marble019.png-bfd8586291a58431109140d9df9e27cd.s3tc.ctex"
+uid="uid://boqr7dg2quvrv"
+path.s3tc="res://.godot/imported/metal_office_desk_arm_1k.jpg-75c2ea2b8741d3f1af11b358ccdfcade.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Marble019_1K-PNG/Marble019.png"
-dest_files=["res://.godot/imported/Marble019.png-bfd8586291a58431109140d9df9e27cd.s3tc.ctex"]
+source_file="res://assets/metal_office_desk_1k.gltf/textures/metal_office_desk_arm_1k.jpg"
+dest_files=["res://.godot/imported/metal_office_desk_arm_1k.jpg-75c2ea2b8741d3f1af11b358ccdfcade.s3tc.ctex"]
 
 [params]
 

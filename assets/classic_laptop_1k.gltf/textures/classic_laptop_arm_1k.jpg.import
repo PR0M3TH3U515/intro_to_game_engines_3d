@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbhtdacr0iocp"
-path.s3tc="res://.godot/imported/Marble019.png-bfd8586291a58431109140d9df9e27cd.s3tc.ctex"
+uid="uid://ct8xsqiuskdm1"
+path.s3tc="res://.godot/imported/classic_laptop_arm_1k.jpg-343921acc6d58e3ca4c041942b423880.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Marble019_1K-PNG/Marble019.png"
-dest_files=["res://.godot/imported/Marble019.png-bfd8586291a58431109140d9df9e27cd.s3tc.ctex"]
+source_file="res://assets/classic_laptop_1k.gltf/textures/classic_laptop_arm_1k.jpg"
+dest_files=["res://.godot/imported/classic_laptop_arm_1k.jpg-343921acc6d58e3ca4c041942b423880.s3tc.ctex"]
 
 [params]
 

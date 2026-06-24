@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://wv0sfb7gijvt"]
+
+[ext_resource type="PackedScene" uid="uid://cp6cklhyh7pt6" path="res://assets/metal_office_desk_1k.gltf/metal_office_desk_1k.gltf" id="1_0iqh6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_em11a"]
+size = Vector3(2.0000005, 0.7875, 0.9170825)
+
+[node name="metal_office_desk_1k" unique_id=504162446 instance=ExtResource("1_0iqh6")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="metal_office_desk" parent_id_path=PackedInt32Array(442792351) index="0" unique_id=2110218483]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-07, 0.39375, -0.010568917)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="metal_office_desk/StaticBody3D" index="0" unique_id=1536680021]
+shape = SubResource("BoxShape3D_em11a")

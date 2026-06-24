@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bk2lh0h8pbhpq"]
+
+[ext_resource type="PackedScene" uid="uid://bjh1348and74a" path="res://assets/greek_pillar/scene.gltf" id="1_qbpet"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ur3jl"]
+points = PackedVector3Array(-0.9956999, -0.5198332, -11.470144, 1.1657162, 0.46206313, -0.6630632, 1.1655722, -0.55577254, -0.6637833, -1.0804883, 0.66956943, -0.63531315, 0.5182405, 0.9943111, -11.470144, 1.0864778, -0.5198332, -11.470144, -0.42766652, -1.0878665, -1.0592556, 0.5182405, -1.0878665, -11.470144, -0.9956999, 0.61562216, -11.470144, -0.61701095, 0.9943111, -1.0592556, -1.0788131, -0.55759865, -0.6436894, 0.5182405, 0.9943111, -1.0592556, -0.42766652, -1.0878665, -11.470144, 1.0864778, 0.42607385, -11.470144, 0.5182405, -1.0878665, -1.0592556, -0.61701095, 0.9943111, -11.470144)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ccb5t"]
+points = PackedVector3Array(-1.9421444, -1.4661664, 0.26563686, 1.8434296, 1.3726109, 0.45490724, 1.8434296, 1.3726109, -0.6803814, 1.8434296, -1.4661664, 0.45490724, -1.3740554, 1.3726109, 0.64434433, -1.5635481, -1.4661664, -0.86965173, -1.5635481, 1.3726109, -0.86965173, 1.654326, -1.4661664, -0.86965173, 0.89713335, 0.61552954, -1.0592556, 1.2757297, -1.4661664, 0.64434433, -1.3740554, -1.4661664, 0.64434433, -1.9421444, 1.3726109, 0.26563686, 1.2757297, 1.3726109, 0.64434433, -0.9954591, 0.61552954, -1.0592556, 1.086237, -0.51953673, -1.0592556, 1.654326, 1.3726109, -0.86965173, 1.8434296, -1.4661664, -0.6803814, -1.7584012, -1.3349469, -0.4648877, -0.6168628, 0.9937923, -1.0592556, -1.7526517, -1.4661664, 0.45490724, -1.7559786, 1.2396615, -0.46454197, -1.7526517, 1.3726109, 0.45490724)
+
+[node name="Sketchfab_Scene" unique_id=1403311836 instance=ExtResource("1_qbpet")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/pillar_obj_cleaner_materialmerger_gles/Object_2" parent_id_path=PackedInt32Array(681329938) index="0" unique_id=333937183]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/pillar_obj_cleaner_materialmerger_gles/Object_2/StaticBody3D" index="0" unique_id=884835084]
+shape = SubResource("ConvexPolygonShape3D_ur3jl")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Sketchfab_model/pillar_obj_cleaner_materialmerger_gles/Object_2/StaticBody3D" index="1" unique_id=1173963190]
+shape = SubResource("ConvexPolygonShape3D_ccb5t")
